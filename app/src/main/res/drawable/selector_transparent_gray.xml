@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false" 
+        android:state_focused="true">
+        <color android:color="@color/gray_eeeeee" />
+    </item>  <!-- pressed gray_dddddd-->
+    
+    <item android:state_pressed="true" >
+        <color android:color="@color/gray_dddddd" />
+    </item> 
+    <!-- <item android:state_pressed="true"
+          android:drawable="@color/gray_eeeeee"/> --><!-- pressed -->
+          
+    <!-- <item android:state_hovered="true">
+        <color android:color="@color/gray_eeeeee" />
+    </item>  --> <!-- state_hovered -->
+
+    <item android:drawable="@android:color/transparent"/>
+ <!-- default -->
+
+</selector>

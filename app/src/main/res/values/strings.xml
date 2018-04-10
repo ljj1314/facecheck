@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 电信名字 -->
+    <string name="app_name">幼学通</string>
+    <!-- 公司名字 -->
+    <string name="app_pcname">健康同学</string>
+    <!-- 移动名字 -->
+    <string name="app_mobilename">和宝贝</string>
+    <!-- 大地名字 -->
+    <string name="app_ddname">家园宝</string>
+    <!-- 附件幼家园  -->
+    <string name="app_yjyname">幼家园</string>
+    <string-array name="jinzhi">
+        <item>"十进制"</item>
+        <item>"十六进制"</item>
+	</string-array>
+   
+    <!-- 平台协议 -->
+	<string-array name="platform">
+	    <item>"ww"</item><!-- 万维协议 -->
+	    <item>"nl"</item><!-- 能龙协议 -->
+	    <item>"zw"</item><!-- 中维协议 -->
+	</string-array>
+	
+    <!-- 平台协议区域 -->
+	<string-array name="region">
+	    <item>"yxt_all"</item><!-- 幼学通(全国) -->
+	    <item>"yxt_gansu"</item><!-- 幼学通(甘肃乐智) -->
+	    <item>"hebb"</item><!-- 和宝贝 -->
+	    <item>"jktx"</item><!-- 健康同学 -->
+	    <item>"ddjy"</item><!-- 大地教育 -->
+	    <item>"hejy"</item><!-- 和教育 -->
+	    <item>"fjyxt"</item><!-- 福建幼学通 -->
+	</string-array>
+	
+    <!-- 上学时间段语音 -->
+    <string-array name="go_school">
+        <item>"早上好"</item>
+        <item>"小朋友，早上好"</item>
+        <item>" "</item>
+    </string-array>
+    
+    <!-- 放学时间段语音 -->
+    <string-array name="out_school">
+        <item>"再见"</item>
+        <item>"小朋友，再见"</item>
+        <item>" "</item>
+    </string-array>
+    
+	<string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string formatted="false" name="tts_toast_format">缓冲进度为%d%%，播放进度为%d%%</string>
+    
+    <string name="app_id">900013480</string>
+    
+</resources>

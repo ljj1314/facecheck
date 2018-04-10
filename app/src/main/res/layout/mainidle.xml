@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainidlelayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    
+    
+    android:weightSum="3" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+       >
+
+        <ImageView
+            android:id="@+id/photoImageView"
+            android:layout_width="fill_parent"
+            
+            android:scaleType="fitCenter"
+            android:layout_height="fill_parent"/>
+            <!-- android:scaleType="fitXY" -->    
+            <!-- android:src="@drawable/logomobile"移动logo -->    
+              <!-- android:src="@drawable/ltelogo"电信logo --> 
+              <!-- android:src="@drawable/telpo"教学通logo --> 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+       >
+
+      <TextView
+          android:id="@+id/viewattInfo"
+          android:layout_width="fill_parent"
+          android:layout_height="120dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textColor="#FF00FF"
+          android:textSize="24dp" />
+       
+       <TextView
+          android:id="@+id/camerinfo"
+          android:layout_width="fill_parent"
+          android:layout_height="60dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textColor="#FF00FF"
+          android:textSize="24dp" />
+      
+       
+       <TextView
+          android:id="@+id/internetshon"
+          android:layout_width="fill_parent"
+          android:layout_height="50dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="20dp"
+          android:textColor="#FF00FF"
+          android:textSize="24dp" />
+       
+    </LinearLayout>  
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+       >
+
+      <TextView
+          android:id="@+id/viewdtime"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="120dp"
+          android:layout_marginTop="1dp"
+          android:textColor="#0000FF"
+          android:textSize="80dp" />
+    </LinearLayout>
+
+</LinearLayout>

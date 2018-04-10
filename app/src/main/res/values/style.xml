@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MyTheme" parent="@android:Theme.Holo.Light">
+		<item name="android:windowNoTitle">true</item><!-- 设置无标题 --> 
+		<!-- <item name="android:windowFullscreen">?android:windowNoTitle</item> -->
+ 	</style>
+ 
+    <style name="DefaultStyle">
+        <item name="android:textSize">@dimen/settingpara_size</item>
+    </style>
+
+    <style name="TextViewStyle" parent="@style/DefaultStyle">
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:textColor">@color/black_666666</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@style/DefaultStyle">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:paddingRight">40dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textColor">@color/black_333333</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_transparent_gray</item>
+        <!-- <item name="android:background">@null</item> -->
+    </style>
+
+    <style name="SpinnerStyle" >
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_transparent_gray</item>
+        <item name="android:popupBackground">@drawable/white_bg</item>
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+
+    <style name="mySwitchStyle" parent="@style/DefaultStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical|center</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="track">@drawable/switch_track_green</item>
+        <item name="thumb">@drawable/background_fenced</item>
+        <item name="switchTextAppearanceAttrib">@style/mySwitchTextAppearance</item>
+        <item name="android:background">@drawable/selector_transparent_gray</item>
+        <item name="textOn">开</item>
+        <item name="textOff">关</item>
+        <item name="pushStyle">true</item>
+        <item name="textOnThumb">true</item>
+        <item name="thumbExtraMovement">0dp</item>
+        <item name="thumbTextPadding">6dp</item>
+        <item name="trackTextPadding">6dp</item>
+        <item name="switchMinWidth">69dp</item>
+        <item name="switchMinHeight">36dp</item>
+        <item name="switchPadding">6dp</item>
+    </style>
+
+    <style name="mySwitchTextAppearance">
+        <item name="textColor">#FFeeFFee</item>
+        <item name="textColorHighlight">#FFeeFFee</item>
+        <item name="textColorHint">#FFeeFFee</item>
+        <item name="textColorLink">#FFeeFFee</item>
+        <item name="textSize">16sp</item>
+        <item name="textStyle">normal</item>
+    </style>
+
+    <style name="lineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/gray_e5e5e5</item>
+    </style>
+
+    <!-- 重写系统弹出Dialog -->
+
+    <style name="myDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+	<style name="SwitchButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:layout_margin">0dp</item>
+		<item name="android:paddingLeft">50dp</item>
+		<item name="android:paddingRight">40dp</item>
+		<item name="android:paddingTop">30dp</item>
+		<item name="android:paddingBottom">30dp</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">28sp</item>
+        <item name="android:background">@drawable/selector_transparent_gray</item>
+		<item name="kswTextOff">关</item>
+		<item name="kswTextOn">开</item>
+		<item name="kswTextMarginH">0dp</item>
+		<item name="kswBackMeasureRatio">2</item>
+		<!-- <item name="kswBackDrawable">@drawable/sleft_background_copy1</item> -->
+		<item name="kswBackColor">@color/blue_4483ff</item>
+		<item name="kswBackRadius">50dp</item>
+		<!-- <item name="kswThumbRadius">14dp</item> -->
+		<!-- <item name="kswThumbDrawable">@drawable/stoggle_copy2</item> -->
+		<item name="kswThumbColor">@color/white</item>
+		<item name="kswThumbWidth">50dp</item>
+		<item name="kswThumbHeight">50dp</item>
+		<item name="kswThumbRadius">50dp</item>
+		<item name="kswThumbMargin">5dp</item>
+	</style>
+
+</resources>

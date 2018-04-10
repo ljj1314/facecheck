@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/welcome"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="620dp" >
+
+        <ImageView
+            android:id="@+id/imtel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+           
+            android:visibility="gone" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/TVversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginLeft="400dp"
+            android:singleLine="false"
+            android:text="V1.0"
+            android:layout_marginTop="400dp"
+            android:textColor="#18579E"
+            android:textSize="48dp"
+            android:textStyle="bold|normal|italic" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <!-- <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_gravity="bottom"
+            android:adjustViewBounds="false"
+            android:scaleType="center"
+            android:src="@drawable/loadtitle" >
+        </ImageView> -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#18579E"
+            android:textSize="28sp"
+            android:text="正在努力的加载中..." />
+    </LinearLayout>
+
+</LinearLayout>

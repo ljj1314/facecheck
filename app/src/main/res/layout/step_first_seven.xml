@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:context=".WifiListActivity" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" 
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/selector_back_button"
+            android:clickable="true" 
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingTop="30dp" 
+        android:paddingBottom="150dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 1" 
+            android:textColor="@android:color/white"
+            android:textSize="34sp"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络设置" 
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:layout_marginTop="80dp"
+        	android:background="@drawable/white_bg">
+
+            <LinearLayout
+	            android:id="@+id/ll_ethernet"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" 
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+        		android:gravity="center_vertical"
+	            android:background="@drawable/selector_transparent_gray">
+		        <TextView
+		            android:id="@+id/textView_1"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:text="有线网络"
+		            android:textColor="@color/black_333333"
+		            android:textSize="28sp" />
+		        <TextView
+		            android:id="@+id/state_1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="可用"
+		            android:textColor="@color/blue_45b1ea"
+		            android:textSize="20sp" />
+			    <ImageView  
+			        android:id="@+id/round_icon_1"  
+			        android:layout_width="wrap_content"  
+			        android:layout_height="wrap_content"  
+			        android:padding="10dp" 
+			        android:src="@drawable/round_icon_blue"/> 
+            </LinearLayout>
+
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="2dp"
+		        android:background="@color/gray_eeeeee" >
+		    </View>
+	        
+            <LinearLayout
+	            android:id="@+id/ll_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" 
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+        		android:gravity="center_vertical"
+	            android:background="@drawable/selector_transparent_gray">
+		        <TextView
+		            android:id="@+id/textView_2"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:text="移动网络"
+		            android:textColor="@color/black_333333"
+		            android:textSize="28sp" />
+		        <TextView
+		            android:id="@+id/state_2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="不可用"
+		            android:textColor="@color/gray_c4c4c4"
+		            android:textSize="20sp" />
+			    <ImageView  
+			        android:id="@+id/round_icon_2"  
+			        android:layout_width="wrap_content"  
+			        android:layout_height="wrap_content"  
+			        android:padding="10dp" 
+			        android:src="@drawable/round_icon_gray"/> 
+            </LinearLayout>
+			<View
+		        android:layout_width="match_parent"
+		        android:layout_height="2dp"
+		        android:background="@color/gray_eeeeee" >
+		    </View>
+	        <LinearLayout
+	            android:id="@+id/ll_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" 
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+        		android:gravity="center_vertical"
+	            android:background="@drawable/selector_transparent_gray">
+		        <TextView
+		            android:id="@+id/textView_3"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:text="WIFI"
+		            android:textColor="@color/black_333333"
+		            android:textSize="28sp" />
+		        <TextView
+		            android:id="@+id/state_3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="可用"
+		            android:textColor="@color/blue_45b1ea"
+		            android:textSize="20sp" />
+			    <ImageView  
+			        android:id="@+id/arrow_icon"  
+			        android:layout_width="wrap_content"  
+			        android:layout_height="wrap_content"  
+			        android:padding="10dp" 
+			        android:src="@drawable/arrow_down"/> 
+            </LinearLayout>
+	        <ListView
+	            android:id="@+id/lv_wifi"
+	            android:layout_width="match_parent"
+	            android:layout_height="300dp"
+	            android:layout_marginTop="1dp" 
+	            android:layout_marginLeft="0dp"
+	            android:layout_marginRight="0dp"
+	            android:fadingEdge="none"
+				android:divider="@color/gray_c4c4c4"
+				android:visibility="gone"
+				android:scrollbarFadeDuration="0"
+        		android:fadeScrollbars="false">
+	        </ListView>
+            
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:textSize="38sp"
+            android:gravity="center"
+            android:background="@drawable/selector_blue_button"
+            android:textColor="@android:color/white"
+            android:text="下一步" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.att"
+        minSdkVersion 10
+        targetSdkVersion 10
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.7'
+    compile files('libs/bluetooth.jar')
+    compile files('libs/bugly_crash_release.jar')
+    compile files('libs/CH9326UARTDriver.jar')
+    compile files('libs/com.baidu.tts_2.1.4.jar')
+    compile files('libs/galaxy_lite.jar')
+    compile files('libs/happy-dns-0.2.9.jar')
+    compile files('libs/jxl.jar')
+    compile files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    compile files('libs/okhttp-3.4.1.jar')
+    compile files('libs/okio-1.9.0.jar')
+    compile files('libs/opencsv-3.7.jar')
+    compile files('libs/picasso-2.0.0.jar')
+    compile files('libs/qiniu-android-sdk-7.2.1.jar')
+    compile files('libs/Sunflower.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+
+    compile project(path: ':arcface')
+}

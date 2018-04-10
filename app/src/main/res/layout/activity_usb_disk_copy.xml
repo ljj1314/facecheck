@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:context=".WifiListActivity" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/selector_back_button"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U盘资料复制"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="请把需要轮播的图片或视频分别放入对应的“轮播图片”或“轮播视频”文件夹；"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="图片支持.jpg和.png格式，视频支持.mp4和.avi格式。"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/ll_copy_names"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/white_bg"
+                    android:orientation="vertical"
+                    android:paddingBottom="80dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="70dp"
+                    android:paddingTop="20dp"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/tv_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有以下资源文件："
+                        android:textColor="@color/black_333333"
+                        android:textSize="28sp" />
+<!--  
+	                <ScrollView
+	                    android:id="@+id/scrollView1"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:focusable="false" >
+	                    <LinearLayout
+                			android:id="@+id/ll_names"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="match_parent"
+	                        android:orientation="vertical" >
+		                    < <TextView
+		                        android:id="@+id/tv_item_name"
+		                        android:layout_width="match_parent"
+		                        android:layout_height="wrap_content"
+		                        android:layout_marginTop="10dp"
+		                        android:background="@drawable/frame_gray"
+		                        android:padding="10dp"
+		                        android:textSize="28sp" /> 
+	                    </LinearLayout>
+	                </ScrollView>
+	                
+            -->
+            <Button
+                    android:id="@+id/bt_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                   
+                    android:background="@drawable/selector_blue_button"
+                    android:enabled="false"
+                    android:gravity="center"
+                   
+                    android:text="复制"
+                    android:focusable="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="38sp" />
+            <ListView 
+                
+                
+                 android:id="@+id/scrollView1"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+                
+                
+                ></ListView>
+            
+             
+                </LinearLayout>
+
+               
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+
+                <ImageView
+                    android:id="@+id/iv_loading_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="请插入U盘"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+                <Button
+                    android:id="@+id/next_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_blue_button"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:text="完成"
+                    android:textColor="@android:color/white"
+                    android:textSize="38sp"
+                    android:focusable="true"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

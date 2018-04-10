@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.att"
+    android:largeHeap="true"
+    android:versionCode="201801171"
+    android:versionName="1.5.0" >
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="true" >
+    </supports-screens>
+
+    <!-- 开机自动服务自动启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-feature android:required="true" android:name="android.hardware.usb.host" />
+	<uses-permission android:name="android.permission.HARDWARE_TEST"/>  
+    <!-- Bugly Android -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+
+    <uses-feature android:name="android.hardware.camera" > </uses-feature>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 允许应用程序改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- 允许应用程序改变WIFI连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 允许应用程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 允许应用程序访问WIFI网卡的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 允许应用程序完全使用网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+   
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+   
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+   
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+  
+    <!-- 实现开机自动启动Service或app -->
+   
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+   
+    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+ 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  
+    
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+	<uses-permission  android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission  android:name="android.permission.BLUETOOTH"/>
+    
+    
+    <!--
+         电信
+    		<application android:icon="@drawable/icon" android:label="@string/app_name"
+         android:theme="@style/MyTheme" >
+    -->
+
+
+    <!--
+         公司
+    		<application android:icon="@drawable/xiaoleyuan_icon" android:label="@string/app_pcname"
+         android:theme="@style/MyTheme" >
+    -->
+
+
+    <!--
+         移动 
+         <application android:icon="@drawable/mobile_icon" android:label="@string/app_mobilename"
+         android:theme="@style/MyTheme" >
+    -->
+
+
+    <!--
+         大地 
+         <application android:icon="@drawable/dadiicon" android:label="@string/app_ddname"
+         android:theme="@style/MyTheme"
+        >
+    --> 
+   
+	<!-- 
+	
+	 大地 
+         <application android:icon="@drawable/dadiicon" android:label="@string/app_ddname"
+         android:theme="@style/MyTheme">
+	
+	
+	 -->
+
+
+    <application
+        android:name="com.att.MyApp"
+        android:icon="@drawable/xiaoleyuan_icon"
+        android:label="@string/app_pcname"
+        android:theme="@style/MyTheme" >
+
+        <!-- <android:theme="@android:style/Theme.NoTitleBar"> -->
+        <activity
+            android:name="com.att.VersionActivity"
+            android:label="@string/app_pcname" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+               
+            </intent-filter>
+             <intent-filter>
+               
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            
+            
+             <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <!--<service android:name=".StartOnBootService" >-->
+        <!--</service>-->
+
+        <receiver android:name=".BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.httpast" />
+                <action android:name="com.telpoedu.omc.TO_ATT_ACTION" />
+                <action android:name="com.telpoedu.omc.FROM_ATT_ACTION" />
+                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            
+        </receiver>
+	<service android:name="com.att.server.OmcLoadService" />
+        <service android:name="com.att.server.WwpostServer" />
+        <service android:name="com.att.server.Nlpostast" />
+        <service android:name="com.att.server.NlServer" />
+        <service android:name="com.att.server.ZwService" />
+        <service android:name="com.att.server.OmcServer" />
+        <service android:name="com.att.server.HttppostAst" />
+        <service android:name="com.att.server.UpdataServer" />
+        <service android:name="com.att.server.TelpoService" />
+         <service android:name="com.att.server.TpBleService" />
+	<service
+            android:name="com.telpo.BleSample.ACSUtilityService"
+            android:enabled="true" >
+            </service>
+        <!--<activity android:name="com.att.DeviceCon" >-->
+        <!--</activity>-->
+        <!--<activity android:name="com.att.DeviceCamera" >-->
+        <!--</activity>-->
+        <activity
+            android:name="com.att.UpdateAppActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.att.MainIdleActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.att.SettingParaActivity" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.att.SwingCardAttActivity"
+            android:launchMode="singleTask" >
+             
+
+           
+        </activity>
+        <activity
+            android:name="com.att.FirstProgress"
+            android:launchMode="singleTask" >
+        </activity>
+        <!--<activity-->
+            <!--android:name="com.att.ImageViewMaindle"-->
+            <!--android:launchMode="singleTask" >-->
+        <!--</activity>-->
+        <activity android:name="com.att.guide.StepFirstActivity" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.att.guide.StepSecondActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity android:name="com.att.guide.StepThirdActivity" >
+        </activity>
+        <activity android:name="com.att.guide.StepFourthActivity" >
+        </activity>
+        <activity android:name="com.att.guide.UsbDiskCopyActivity" >
+        </activity>
+         <activity android:name="com.att.WebAcitivity" >
+        </activity>
+    </application>
+
+
+</manifest>

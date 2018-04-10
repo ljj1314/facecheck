@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_4483ff"
+                android:padding="20dp" >
+
+                <ImageView
+                    android:id="@+id/ib_setting_btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/selector_back_button"
+                    android:focusable="false" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="设置"
+                    android:textColor="#ffffff"
+                    android:textSize="50sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_urls"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:text="考勤上报URL" />
+
+                    <EditText
+                        android:id="@+id/et_att_url"
+                        style="@style/EditTextStyle"
+                        android:hint="请输入考勤上报URL"
+                        android:inputType="textUri" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="考勤图片上报URL" />
+
+                    <EditText
+                        android:id="@+id/et_att_pic_url"
+                        style="@style/EditTextStyle"
+                        android:inputType="textUri" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="家长图片下载URL" />
+
+                    <EditText
+                        android:id="@+id/et_parents_pic_url"
+                        style="@style/EditTextStyle"
+                        android:inputType="textUri" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="卡信息下载URL" />
+
+                    <EditText
+                        android:id="@+id/et_card_info_url"
+                        style="@style/EditTextStyle"
+                        android:inputType="textUri" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="体温上报URL" />
+
+                    <EditText
+                        android:id="@+id/et_temp_url"
+                        style="@style/EditTextStyle"
+                        android:inputType="textUri" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <View
+                    style="@style/lineStyle"
+                    android:layout_height="38dp"
+                    android:background="@color/gray_eeeeee" />
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ids"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="终端ID" />
+
+                    <EditText
+                        android:id="@+id/et_device_id"
+                        style="@style/EditTextStyle" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="学校ID" />
+
+                    <EditText
+                        android:id="@+id/et_school_id"
+                        style="@style/EditTextStyle" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:id="@+id/ll_province_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/TextViewStyle"
+                            android:text="省份编码" />
+
+                        <EditText
+                            android:id="@+id/et_province_id"
+                            style="@style/EditTextStyle" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <View style="@style/lineStyle" />
+                </LinearLayout>
+
+                <View
+                    style="@style/lineStyle"
+                    android:layout_height="38dp"
+                    android:background="@color/gray_eeeeee" />
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="能龙协议链接" />
+
+                <EditText
+                    android:id="@+id/et_nl_url"
+                    style="@style/EditTextStyle" >
+                </EditText>
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="能龙密码" />
+
+                <EditText
+                    android:id="@+id/et_nl_pass"
+                    style="@style/EditTextStyle" >
+                </EditText>
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="考勤平台协议" />
+
+                <Spinner
+                    android:id="@+id/sp_att_platform"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="考勤平台协议" />
+
+                <Spinner
+                    android:id="@+id/sp_att_pic_platform"
+                    style="@style/SpinnerStyle" >
+                </Spinner>
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡号显示格式" />
+
+                <Spinner
+                    android:id="@+id/sp_card_disp"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡号上报格式" />
+
+                <Spinner
+                    android:id="@+id/sp_card_upload"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡批量上报数量" />
+
+                <EditText
+                    android:id="@+id/et_att_upload_sum"
+                    style="@style/EditTextStyle"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="重复刷卡限制时间(秒)" />
+
+                <EditText
+                    android:id="@+id/et_att_upload_space"
+                    style="@style/EditTextStyle"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡号补码" />
+
+                <EditText
+                    android:id="@+id/ed_card_buma"
+                    style="@style/EditTextStyle"
+                    android:numeric="integer" />
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="心跳时间(秒)" />
+
+                <EditText
+                    android:id="@+id/et_heartbeat"
+                    style="@style/EditTextStyle"
+                    android:maxLength="3"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="数据更新间隔(秒)" />
+
+                <EditText
+                    android:id="@+id/et_updatetime"
+                    style="@style/EditTextStyle"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="学校名称" />
+
+                <EditText
+                    android:id="@+id/et_schoolname"
+                    style="@style/EditTextStyle" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="OMC网管url" />
+
+                <EditText
+                    android:id="@+id/et_omc"
+                    style="@style/EditTextStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="考勤界面超时时间(秒)" />
+
+                <EditText
+                    android:id="@+id/et_att_timeout"
+                    style="@style/EditTextStyle"
+                    android:maxLength="3"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="待机轮播图片间隔(秒)" />
+
+                <EditText
+                    android:id="@+id/et_idle_pic_duration"
+                    style="@style/EditTextStyle"
+                    android:maxLength="3"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="账号设置" />
+
+                <EditText
+                    android:id="@+id/et_idle_account"
+                    style="@style/EditTextStyle"
+                    android:maxLength="3"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View
+                style="@style/lineStyle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="密码设置" />
+
+                <EditText
+                    android:id="@+id/et_idle_password"
+                    style="@style/EditTextStyle"
+                    android:maxLength="3"
+                    android:numeric="integer" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="播放语音音量" />
+
+                <Spinner
+                    android:id="@+id/spvoice"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:entries="@array/ttvoice"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/sb_voice_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:paddingBottom="43dp"
+                    android:paddingLeft="118dp"
+                    android:paddingRight="58dp"
+                    android:paddingTop="43dp"
+                    android:progressDrawable="@drawable/seek_bar_bg"
+                    android:textSize="@dimen/settingpara_size"
+                    android:thumb="@drawable/seek_bar_thumb" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡号反转" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_card_reversal"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="卡号补0" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_enzero"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="运动考勤" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_sportatt"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="启用蓝牙AP" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_blueap"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="启用蓝牙AP透传" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_tcap"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="启用厂家logo" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_logo"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="启用学校ID" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_schoolid"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="导入csv" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+                </View>
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_csv"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="待机轮播视频开关" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_idle_vedio_switch"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="轮播图片全屏显示" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_idle_full_screen_switch"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            
+             <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="完整播报" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_idle_allvideo_switch"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+            
+            
+             <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="班级播报" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_idle_classvideo_switch"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+            
+            
+              <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="板载蓝牙" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_idle_bleban_switch"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+            
+            
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="无效卡语音提示" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_carderr_voice_tips"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="刷卡语音提示" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_carderr_voice_take"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="抓拍开关" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_take_photo"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_cloud_storage"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View style="@style/lineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_transparent_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:text="启用云存储" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <com.att.SettingParaSwitch
+                        android:id="@+id/sw_cloud_storage"
+                        style="@style/SwitchButtonStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="移动网络开关" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <com.att.SettingParaSwitch
+                    android:id="@+id/sw_take_3G"
+                    style="@style/SwitchButtonStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="上学时间段1" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_go_school_t1_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="上学时间段2" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_go_school_t2_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="上学时间段3" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_go_school_t6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_go_school_t3_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="放学时间段1" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_out_school_t1_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="放学时间段2" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_out_school_t2_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="放学时间段3" />
+
+                <View
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="至"
+                    android:textSize="28sp" />
+
+                <TimePicker
+                    android:id="@+id/tp_out_school_t6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_transparent_gray" />
+
+                <Spinner
+                    android:id="@+id/sp_out_school_t3_voice"
+                    style="@style/SpinnerStyle" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="管理员密码" />
+
+                <EditText
+                    android:id="@+id/et_admin_passwd"
+                    style="@style/EditTextStyle"
+                    android:password="true" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_transparent_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_app_version"
+                    style="@style/TextViewStyle"
+                    android:text="软件版本号：V1.3" />
+            </LinearLayout>
+
+            <View style="@style/lineStyle" />
+
+            <LinearLayout
+                android:id="@+id/ll_ap_version"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_ap_version"
+                    style="@style/TextViewStyle"
+                    android:singleLine="true"
+                    android:text="蓝牙AP版本号：V1.0" />
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+
+             <LinearLayout
+                android:id="@+id/imei_version"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                 >
+
+                <TextView
+                    android:id="@+id/tv_imei"
+                    style="@style/TextViewStyle"
+                    android:singleLine="true"
+                    android:text="imei" />
+
+                <View style="@style/lineStyle" />
+            </LinearLayout>
+            
+            
+            <View
+                style="@style/lineStyle"
+                android:layout_height="38dp"
+                android:background="@color/gray_eeeeee" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_gravity="center"
+        android:background="@color/gray_e6e6e6"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_cardinfo_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="卡信息更新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+
+            <Button
+                android:id="@+id/bt_clear_att"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="清考勤记录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+
+            <Button
+                android:id="@+id/bt_check_version"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="检查新版本"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+
+            <Button
+                android:id="@+id/bt_factory_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:onClick="factory_reset"
+                android:text="恢复出厂设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_guide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="进入安装向导"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+
+            <Button
+                android:id="@+id/bt_u_copy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="U盘资料复制"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_para_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_blue_button_2"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settingpara_size" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

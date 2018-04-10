@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+ 
+    <!-- 顶部椭园边缘 -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/white" >
+    </ImageView>
+	<!-- 中间白色背景,两个TextView,标题和内容,留一个LinearLayout,在代码中根据调用动态加上按钮 -->
+    <LinearLayout
+        android:layout_width="665dp"
+        android:layout_height="475dp"
+        
+        android:background="@drawable/white_bg"
+        android:orientation="vertical">
+ 
+       <FrameLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           
+           
+           >
+        
+        
+       <WebView 
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:id="@+id/webdg"
+           android:scaleType="fitCenter"
+           />
+       <!--  -->
+       
+       
+       <ImageView 
+           
+           android:layout_width="52dp"
+           android:layout_height="52dp"
+           android:clickable="true"
+           android:id="@+id/stuckimp"
+           android:src="@drawable/instruction_icon"
+           android:scaleType="fitXY"
+           android:visibility="gone"
+           android:layout_gravity="left|bottom"
+           android:layout_marginLeft="20dp"
+           android:layout_marginBottom="20dp"
+           />
+       
+       
+       
+	    <View
+	        android:layout_width="match_parent"
+	        android:layout_height="2dp"
+	        android:visibility="gone"
+	        android:background="@color/gray_eeeeee" >
+	    </View>
+	    
+		<!-- 在LinearLayout中加按钮 -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+             android:visibility="gone"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+            
+        </LinearLayout>
+        
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 底部椭园边缘 -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/white" >
+    </ImageView>
+ 
+</LinearLayout>
